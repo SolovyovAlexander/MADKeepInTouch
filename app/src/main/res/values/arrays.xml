@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reminder_durations">
+        <item>Everyday</item>
+        <item>Three times a week</item>
+        <item>Two times a week</item>
+        <item>Once a week</item>
+        <item>Once in two weeks</item>
+        <item>Once a month</item>
+    </string-array>
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "965010701605",
+    "firebase_url": "https://mad-keep-in-touch.firebaseio.com",
+    "project_id": "mad-keep-in-touch",
+    "storage_bucket": "mad-keep-in-touch.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965010701605:android:f57ff6e60be7cb3f906ecc",
+        "android_client_info": {
+          "package_name": "com.example.madkeepintouch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965010701605-c0hhpa1obo68nmnev3po6ebko9u2dggm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7MiJEcQ8YabjIOmia96zhI-Omg-4sJtI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965010701605-c0hhpa1obo68nmnev3po6ebko9u2dggm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

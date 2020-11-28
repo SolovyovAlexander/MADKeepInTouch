@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addPersonSection.AddPersonFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/form_horizontal_margin"
+            android:layout_marginTop="@dimen/form_vertical_margin"
+            android:text="@string/name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/add_person_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/form_horizontal_margin"
+            android:layout_marginTop="@dimen/form_vertical_margin"
+            android:layout_marginRight="@dimen/form_horizontal_margin"
+            android:hint="@string/add_person_name_placeholder"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_label" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/form_vertical_margin"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_person_name_input" />
+
+        <TextView
+            android:id="@+id/priority_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/form_horizontal_margin"
+            android:layout_marginTop="@dimen/form_vertical_margin"
+            android:text="@string/priority"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+        <RadioGroup
+            android:id="@+id/priority_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/form_horizontal_margin"
+            android:layout_marginTop="@dimen/form_vertical_margin"
+            android:layout_marginRight="@dimen/form_horizontal_margin"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/priority_label">
+
+            <RadioButton
+                android:id="@+id/top_priority_radio_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_flat_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="@string/top_priority"
+                android:layout_weight="1"
+                android:textColor="@color/radio_text_color_selector"
+                />
+
+            <RadioButton
+                android:id="@+id/family_priority_radio_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_flat_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="@string/family_priority"
+                android:layout_weight="1"
+                android:textColor="@color/radio_text_color_selector"
+                />
+
+            <RadioButton
+                android:id="@+id/friends_priority_radio_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_flat_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="@string/friends_priority"
+                android:layout_weight="1"
+                android:textColor="@color/radio_text_color_selector"
+                />
+
+            <RadioButton
+                android:id="@+id/other_priority_radio_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_flat_selector"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="@string/other_priority"
+                android:layout_weight="1"
+                android:textColor="@color/radio_text_color_selector"
+                />
+            
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/reminder_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/form_horizontal_margin"
+            android:layout_marginTop="@dimen/form_vertical_margin"
+            android:text="@string/reminder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priority_radio_group" />
+
+        <Spinner
+            android:id="@+id/reminder_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/form_horizontal_margin"
+            android:layout_marginTop="@dimen/form_vertical_margin"
+            android:layout_marginRight="@dimen/form_horizontal_margin"
+            android:entries="@array/reminder_durations"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reminder_label" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/form_vertical_margin"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reminder_spinner" />
+
+        <TextView
+            android:id="@+id/messenger_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/form_horizontal_margin"
+            android:layout_marginTop="@dimen/form_vertical_margin"
+            android:layout_marginBottom="@dimen/form_vertical_margin"
+            android:text="@string/messengers"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+<!--        <Button-->
+<!--            android:id="@+id/whats_app_button"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/what_s_app"-->
+<!--            android:layout_marginLeft="@dimen/form_horizontal_margin"-->
+<!--            android:layout_marginTop="@dimen/form_vertical_margin"-->
+<!--            android:layout_marginBottom="@dimen/form_vertical_margin"-->
+<!--            android:background="@color/colorPrimaryLight"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/messenger_label"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/telegram_button"-->
+<!--            />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/telegram_button"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/telegram"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:background="@color/colorPrimaryLight"-->
+<!--            android:layout_marginRight="@dimen/form_horizontal_margin"-->
+<!--            android:layout_marginTop="@dimen/form_vertical_margin"-->
+<!--            android:layout_marginBottom="@dimen/form_vertical_margin"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/whats_app_button"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/messenger_label" />-->
+
+        <EditText
+            android:id="@+id/add_person_contact_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/form_horizontal_margin"
+            android:layout_marginTop="@dimen/form_vertical_margin"
+            android:layout_marginRight="@dimen/form_horizontal_margin"
+            android:hint="@string/add_person_contact_placeholder"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/messenger_label" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"
+            android:layout_marginLeft="@dimen/form_horizontal_margin"
+            android:layout_marginRight="@dimen/form_horizontal_margin"
+            android:layout_marginTop="@dimen/form_vertical_margin"
+            android:layout_marginBottom="@dimen/form_vertical_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_person_contact_input"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
